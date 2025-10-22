@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HSG Construcciones - Proyectos</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="hsg.css">
+  <style>
+    /* Pequeño ajuste inline para garantizar que las imágenes de ejemplo conserven ratio (si no hay hsg.css cargado aún). */
+    img { max-width: 100%; height: auto; display: block; }
+  </style>
+</head>
+<body class="bg-gray-100">
+    
+  <!-- HEADER FIJO -->
+  <header class="fixed top-0 left-0 w-full bg-white shadow-md z-50 border-b border-gray-300">
+    <div class="container mx-auto flex justify-between items-center py-3 px-6 max-w-[1280px]">
+      <!-- Logo -->
+      <div class="flex items-center space-x-2">
+        <img src="IMAGENES/logo original HSG 11.png" alt="Logo HSG Construcciones" class="w-[200px] h-[80px] object-contain"/>
+      </div>
+      
+      <!-- NAV con menú en cascada (escritorio) -->
+      <nav>
+        <ul class="hidden md:flex space-x-6 text-sm font-normal text-gray-800">
+          <li><a href="Index.html" class="hover:text-red-600">Inicio</a></li>
+
+          <li class="dropdown relative">
+            <a href="#servicios" class="hover:text-red-600 flex items-center gap-1">
+              Servicios <i class="fas fa-caret-down"></i>
+            </a>
+            <ul class="dropdown-menu absolute left-0 top-full mt-2 hidden bg-white border border-gray-200 rounded shadow-md w-48">
+              <li><a href="#plomeria" class="block px-4 py-2 text-gray-700 hover:bg-red-600 hover:text-white">Plomería Residencial</a></li>
+              <li><a href="#hidraulicas" class="block px-4 py-2 text-gray-700 hover:bg-red-600 hover:text-white">Redes Hidráulicas</a></li>
+              <li><a href="#gas" class="block px-4 py-2 text-gray-700 hover:bg-red-600 hover:text-white">Gas Natural</a></li>
+            </ul>
+          </li>
+
+          <li><a href="Proyectos.html" class="text-red-600 border-b-2 border-red-600 pb-[2px] font-semibold">Proyectos</a></li>
+          <li><a href="Productos.html" class="hover:text-red-600">Productos</a></li>
+          <li><a href="Contacto.html" class="hover:text-red-600">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <!-- Botones -->
+      <div class="hidden md:flex space-x-3">
+        <a href="tel:+573209109488" class="border border-red-600 text-red-600 px-4 py-2 rounded hover:bg-red-600 hover:text-white text-sm font-semibold">Llamar</a>
+        <a href="#" class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 text-sm font-semibold">Cotizar</a>
+      </div>
+
+      <!-- Botón menú móvil -->
+      <script>
+document.getElementById('mobileMenuBtn').addEventListener('click', () => {
+  document.getElementById('mobileMenu').classList.toggle('hidden');
+});
+</script>
+
+      </button>
+    </div>
+
+    <!-- Menú móvil -->
+    <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-gray-200 shadow-md">
+      <ul class="flex flex-col text-center py-3 space-y-2 text-gray-800">
+        <li><a href="Index.html" class="block py-2 hover:text-red-600">Inicio</a></li>
+        <li><a href="#servicios" class="block py-2 hover:text-red-600">Servicios</a></li>
+        <li><a href="Proyectos.html" class="block py-2 text-red-600 font-semibold">Proyectos</a></li>
+        <li><a href="Productos.html" class="block py-2 hover:text-red-600">Productos</a></li>
+        <li><a href="Contacto.html" class="block py-2 hover:text-red-600">Contacto</a></li>
+        <li><a href="https://wa.me/573209109488" target="_blank" class="block py-2 text-red-600 font-semibold">Cotizar por WhatsApp</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="pt-28 pb-20 bg-gradient-to-r from-red-600 to-gray-400 text-center text-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <span class="bg-gray-600 text-white px-4 py-1 rounded-full text-sm">Proyectos Realizados</span>
+      <h1 class="text-4xl font-bold mt-4">Nuestros Proyectos</h1>
+      <p class="mt-3 text-lg">Conoce algunos de los proyectos más destacados que hemos realizado para nuestros clientes en Bogotá y alrededores.</p>
+    </div>
+  </section>
+
+  <!-- PROYECTOS DESTACADOS -->
+  <section class="container mx-auto py-12 max-w-7xl px-6">
+    <h2 class="text-3xl font-bold text-center mb-2">Proyectos destacados</h2>
+    <p class="text-center text-gray-600 mb-10">Estos son algunos de nuestros trabajos más recientes y representativos.</p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <!-- Proyecto 1 -->
+      <div class="bg-white shadow-md rounded-lg overflow-hidden">
+        <div class="bg-red-600 text-white p-4">
+          <span class="bg-white text-red-600 px-3 py-1 text-xs rounded">Residencial</span>
+          <h3 class="text-xl font-bold mt-2">Remodelación Residencial Suba</h3>
+          <p>📍 Suba, Bogotá | 📅 Marzo de 2024</p>
+          <p>👤 Familia Rodríguez</p>
+        </div>
+        <div class="p-4 text-gray-700">
+          <p>Remodelación completa del sistema de plomería en casa de 2 pisos, incluyendo instalación de nuevas tuberías, modernización de baños y cocina.</p>
+          <ul class="mt-3 space-y-1 list-disc list-inside text-gray-600">
+            <li>Instalación de tuberías de PVC</li>
+            <li>Modernización de 3 baños</li>
+            <li>Renovación sistema cocina</li>
+            <li>Pruebas de presión</li>
+            <li>Garantía 2 años</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Proyecto 2 -->
+      <div class="bg-white shadow-md rounded-lg overflow-hidden">
+        <div class="bg-gray-500 text-white p-4">
+          <span class="bg-white text-gray-600 px-3 py-1 text-xs rounded">Comercial</span>
+          <h3 class="text-xl font-bold mt-2">Red Hidráulica Edificio Comercial</h3>
+          <p>📍 Kennedy, Bogotá | 📅 Febrero de 2024</p>
+          <p>🏢 Edificio Santa María</p>
+        </div>
+        <div class="p-4 text-gray-700">
+          <p>Diseño e instalación de red hidráulica completa para edificio de 5 pisos con sistema de presurización automatizado.</p>
+          <ul class="mt-3 space-y-1 list-disc list-inside text-gray-600">
+            <li>Diseño de red hidráulica</li>
+            <li>Sistema de presurización</li>
+            <li>Tanques de almacenamiento</li>
+            <li>Automatización completa</li>
+            <li>Mantenimiento incluido</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TODOS LOS PROYECTOS -->
+  <section class="container mx-auto py-12 max-w-7xl px-6">
+    <h2 class="text-3xl font-bold text-center mb-2">Todos los Proyectos</h2>
+    <p class="text-center text-gray-600 mb-10">Una muestra completa de nuestro trabajo en diferentes categorías.</p>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Proyecto A -->
+      <div class="bg-white shadow-md p-4 rounded-lg">
+        <span class="bg-red-600 text-white px-3 py-1 text-xs rounded">Residencial</span>
+        <h3 class="text-lg font-bold mt-2">Remodelación Residencial Suba</h3>
+        <p>📍 Suba, Bogotá | 📅 Marzo de 2024</p>
+        <p class="mt-2 text-gray-600">Remodelación completa del sistema de plomería en casa de 2 pisos, incluyendo instalación de nuevas tuberías, modernización de baños y cocina.</p>
+      </div>
+
+      <!-- Proyecto B -->
+      <div class="bg-white shadow-md p-4 rounded-lg">
+        <span class="bg-gray-500 text-white px-3 py-1 text-xs rounded">Comercial</span>
+        <h3 class="text-lg font-bold mt-2">Red Hidráulica Edificio Comercial</h3>
+        <p>📍 Kennedy, Bogotá | 📅 Febrero de 2024</p>
+        <p class="mt-2 text-gray-600">Diseño e instalación de red hidráulica completa para edificio de 5 pisos con sistema de presurización automatizado.</p>
+      </div>
+
+      <!-- Proyecto C -->
+      <div class="bg-white shadow-md p-4 rounded-lg">
+        <span class="bg-orange-500 text-white px-3 py-1 text-xs rounded">Gas Natural</span>
+        <h3 class="text-lg font-bold mt-2">Instalación Gas Natural Conjunto</h3>
+        <p>📍 Engativá, Bogotá | 📅 Enero de 2024</p>
+        <p class="mt-2 text-gray-600">Instalación certificada de red de gas natural para 20 apartamentos con todas las certificaciones requeridas.</p>
+      </div>
+
+      <!-- Proyecto D -->
+      <div class="bg-white shadow-md p-4 rounded-lg">
+        <span class="bg-gray-500 text-white px-3 py-1 text-xs rounded">Comercial</span>
+        <h3 class="text-lg font-bold mt-2">Mantenimiento Preventivo Hotel</h3>
+        <p>📍 Usaquén, Bogotá | 📅 Diciembre de 2023</p>
+        <p class="mt-2 text-gray-600">Plan de mantenimiento preventivo para sistema de plomería de hotel de 4 estrellas con 50 habitaciones.</p>
+      </div>
+
+      <!-- Proyecto E -->
+      <div class="bg-white shadow-md p-4 rounded-lg">
+        <span class="bg-red-600 text-white px-3 py-1 text-xs rounded">Emergencia</span>
+        <h3 class="text-lg font-bold mt-2">Emergencia Residencial Nocturna</h3>
+        <p>📍 Chapinero, Bogotá | 📅 Noviembre de 2023</p>
+        <p class="mt-2 text-gray-600">Atención de emergencia por rotura de tubería principal durante la madrugada, reparada en menos de 4 horas.</p>
+      </div>
+
+      <!-- Proyecto F -->
+      <div class="bg-white shadow-md p-4 rounded-lg">
+        <span class="bg-purple-500 text-white px-3 py-1 text-xs rounded">Industrial</span>
+        <h3 class="text-lg font-bold mt-2">Sistema Filtración Industria</h3>
+        <p>📍 Zona Industrial, Bogotá | 📅 Octubre de 2023</p>
+        <p class="mt-2 text-gray-600">Instalación de sistema de filtración y tratamiento de aguas para planta industrial con alta demanda de agua.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PIE / FOOTER -->
+  <footer class="bg-gray-100 text-gray-600 text-sm">
+    <div class="max-w-6xl mx-auto px-6 py-10 grid grid-cols-1 sm:grid-cols-3 gap-8">
+      <div class="space-y-4">
+        <img src="IMAGENES/logo original HSG 11.png" alt="Logo HSG Construcciones" class="w-[100px] h-[60px]"/>
+        <p class="text-gray-600 max-w-xs">
+          Tu solución confiable en plomería y redes hidráulicas. Más de 10 años de experiencia brindando servicios en Bogotá y alrededores.
+        </p>
+        <div class="flex space-x-4">
+          <a href="#" class="hover:text-gray-800" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+          <a href="#" class="hover:text-gray-800" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+        </div>
+      </div>
+      <div>
+        <h3 class="font-semibold text-gray-800 mb-4">Enlaces rápidos</h3>
+        <ul class="space-y-2">
+          <li><a href="inicio.html" class="hover:text-gray-800">Servicios</a></li>
+          <li><a href="Proyectos.html" class="hover:text-gray-800">Proyectos</a></li>
+          <li><a href="Productos.html" class="hover:text-gray-800">Productos</a></li>
+          <li><a href="Contacto.html" class="hover:text-gray-800">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-semibold text-gray-800 mb-4">Contacto</h3>
+        <ul class="space-y-3">
+          <li class="flex items-center gap-2"><i class="fas fa-phone-alt icon-red"></i> +57 320 910 9488</li>
+          <li class="flex items-center gap-2"><i class="fas fa-envelope icon-red"></i> hsgconstrucciones8@gmail.com</li>
+          <li class="flex items-start gap-2"><i class="fas fa-map-marker-alt icon-red mt-1"></i> Bogotá, Colombia</li>
+        </ul>
+      </div>
+    </div>
+    <div class="max-w-6xl mx-auto px-6 py-6 text-center text-gray-500 text-xs">
+      © 2025 HSG Construcciones SAS - Todos los derechos reservados.
+    </div>
+  </footer>
+
+  <!-- Script menú móvil -->
+  <script>
+    const mobileBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    function toggleMobileMenu() {
+      mobileMenu.classList.toggle('hidden');
+    }
+
+    mobileBtn.addEventListener('click', toggleMobileMenu);
+
+    // Cerrar el menú si se hace click fuera
+    document.addEventListener('click', function(e) {
+      const target = e.target;
+      if (!mobileMenu.contains(target) && !mobileBtn.contains(target) && !mobileMenu.classList.contains('hidden')) {
+        mobileMenu.classList.add('hidden');
+      }
+    });
+
+    // Evitar menú abierto al redimensionar a escritorio
+    window.addEventListener('resize', function() {
+      if (window.innerWidth >= 768) {
+        mobileMenu.classList.add('hidden');
+      }
+    });
+  </script>
+
+</body>
+</html>
+
+

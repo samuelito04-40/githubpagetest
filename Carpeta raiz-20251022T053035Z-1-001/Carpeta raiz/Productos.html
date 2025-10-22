@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="es">
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HSG Construcciones</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="hsg.css">
+  <style>
+    body { font-family: 'Roboto', sans-serif; }
+    .icon-red { color: #b72a2a; }
+    .dropdown:hover .dropdown-menu { display: block; }
+    :root{ --brand-red: #aa0000ff; }
+    .banner-gradient{ background: linear-gradient(180deg, rgba(170,0,0,0.95), rgba(170,0,0,0.65)); }
+    .card-shadow{ box-shadow: 0 6px 18px rgba(0,0,0,0.08); }
+  </style>
+</head>
+<body class="bg-gray-100">
+
+  <!-- Header fijo -->
+  <header class="fixed top-0 left-0 w-full border-b border-gray-300 bg-white z-50 shadow-md">
+    <nav class="max-w-[1280px] mx-auto flex items-center justify-between px-4 py-3" aria-label="Navegación principal">
+      <div class="flex items-center space-x-3">
+        <img src="IMAGENES/logo original HSG 11.png" alt="Logo HSG Construcciones" class="w-[200px] h-[80px] object-contain"/>
+      </div>
+
+      <!-- Menú principal escritorio -->
+      <ul class="hidden md:flex space-x-8 text-sm font-normal text-gray-800 relative">
+        <li><a href="Index.html" class="hover:text-red-600">Inicio</a></li>
+        
+        <!-- Dropdown Servicios -->
+        <li class="dropdown relative">
+          <a href="#servicios" class="hover:text-red-600 flex items-center gap-1">
+            Servicios <i class="fas fa-caret-down"></i>
+          </a>
+          <ul class="dropdown-menu absolute left-0 top-full mt-2 hidden bg-white border border-gray-200 rounded shadow-md w-48">
+            <li><a href="#plomeria" class="block px-4 py-2 text-gray-700 hover:bg-red-600 hover:text-white">Plomería Residencial</a></li>
+            <li><a href="#hidraulicas" class="block px-4 py-2 text-gray-700 hover:bg-red-600 hover:text-white">Redes Hidráulicas</a></li>
+            <li><a href="#gas" class="block px-4 py-2 text-gray-700 hover:bg-red-600 hover:text-white">Gas Natural</a></li>
+          </ul>
+        </li>
+
+        <li><a href="Proyectos.html" class="hover:text-red-600">Proyectos</a></li>
+        <li><a href="Productos.html" class="text-red-600 border-b-2 border-red-600 pb-[2px] font-semibold">Productos</a></li>
+        <li><a href="Contacto.html" class="hover:text-red-600">Contacto</a></li>
+      </ul>
+
+      <!-- Botones escritorio -->
+      <div class="hidden md:flex space-x-3">
+        <button class="flex items-center space-x-2 border border-red-600 text-red-600 rounded px-4 py-2 text-sm font-semibold hover:bg-red-50">
+          <i class="fas fa-phone-alt" aria-hidden="true"></i><span>Llamar</span>
+        </button>
+        <button class="bg-red-600 text-white rounded px-4 py-2 text-sm font-semibold hover:bg-red-600">
+          Cotizar
+        </button>
+      </div>
+
+      <!-- Botón menú móvil -->
+      <script>
+document.getElementById('mobileMenuBtn').addEventListener('click', () => {
+  document.getElementById('mobileMenu').classList.toggle('hidden');
+});
+</script>
+
+      </button>
+    </nav>
+
+    <!-- Menú móvil -->
+    <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-gray-200 shadow-md">
+      <ul class="flex flex-col text-center py-3 space-y-2 text-gray-800">
+        <li><a href="Index.html" class="block py-2 hover:text-red-600">Inicio</a></li>
+        <li><a href="#servicios" class="block py-2 hover:text-red-600">Servicios</a></li>
+        <li><a href="Proyectos.html" class="block py-2 hover:text-red-600">Proyectos</a></li>
+        <li><a href="Productos.html" class="block py-2 text-red-600 font-semibold">Productos</a></li>
+        <li><a href="Contacto.html" class="block py-2 hover:text-red-600">Contacto</a></li>
+        <li><a href="https://wa.me/573209109488" target="_blank" class="block py-2 text-red-600 font-semibold">Cotizar por WhatsApp</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="productos" class="banner-gradient text-white mt-[100px]">
+    <div class="max-w-6xl mx-auto px-6 py-20 text-center">
+      <p class="text-sm uppercase tracking-wider bg-white/10 inline-block px-3 py-1 rounded">Productos y Servicios</p>
+      <h1 class="mt-6 text-3xl md:text-4xl font-extrabold">Nuestros Productos</h1>
+      <p class="mt-4 max-w-2xl mx-auto text-gray-100">Trabajamos solo con las mejores marcas y productos de alta calidad para garantizar la durabilidad y eficiencia de nuestras instalaciones.</p>
+    </div>
+  </section>
+
+  <!-- Productos Destacados -->
+  <section class="max-w-6xl mx-auto px-6 py-12">
+    <h2 class="text-xl font-semibold text-center">Productos Destacados</h2>
+    <p class="text-sm text-gray-500 text-center mt-2">Kit completos y productos más solicitados por nuestros clientes.</p>
+    <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Card 1 -->
+      <article class="card-shadow rounded-lg border p-6 bg-white">
+        <div class="flex items-start justify-between">
+          <h3 class="text-lg font-semibold">Kit Completo Baño Moderno</h3>
+          <span class="text-sm font-medium text-white bg-red-600 rounded-full px-3 py-1">Popular</span>
+        </div>
+        <p class="mt-3 text-sm text-gray-500">Incluye grifería, sanitario, lavamanos y accesorios.</p>
+        <div class="mt-4 flex items-center justify-between">
+          <div>
+            <p class="text-2xl font-bold">Desde $850.000</p>
+            <p class="text-xs text-gray-400">IVA incluido</p>
+          </div>
+          <div class="flex gap-2">
+            <a href="#" class="px-4 py-2 rounded-md border text-sm">Detalles</a>
+            <a href="Contacto.html" class="px-4 py-2 rounded-md text-sm font-semibold" style="background:var(--brand-red); color:white">Solicitar Cotización</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="card-shadow rounded-lg border p-6 bg-white">
+        <div class="flex items-start justify-between">
+          <h3 class="text-lg font-semibold">Sistema de Presurización Residencial</h3>
+          <span class="text-sm font-medium text-white bg-gray-500 rounded-full px-3 py-1">Nuevo</span>
+        </div>
+        <p class="mt-3 text-sm text-gray-500">Bombas, tanques hidroneumáticos y accesorios.</p>
+        <div class="mt-4 flex items-center justify-between">
+          <div>
+            <p class="text-2xl font-bold">Desde $1.200.000</p>
+            <p class="text-xs text-gray-400">Instalación adicional</p>
+          </div>
+          <div class="flex gap-2">
+            <a href="#" class="px-4 py-2 rounded-md border text-sm">Detalles</a>
+            <a href="Contacto.html" class="px-4 py-2 rounded-md text-sm font-semibold" style="background:var(--brand-red); color:white">Solicitar Cotización</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="card-shadow rounded-lg border p-6 bg-white">
+        <div class="flex items-start justify-between">
+          <h3 class="text-lg font-semibold">Red Completa Gas Natural</h3>
+          <span class="text-sm font-medium text-white bg-red-600 rounded-full px-3 py-1">Recomendado</span>
+        </div>
+        <p class="mt-3 text-sm text-gray-500">Instalación, validación y accesorios certificados.</p>
+        <div class="mt-4 flex items-center justify-between">
+          <div>
+            <p class="text-2xl font-bold">Desde $950.000</p>
+            <p class="text-xs text-gray-400">Precio según proyecto</p>
+          </div>
+          <div class="flex gap-2">
+            <a href="#" class="px-4 py-2 rounded-md border text-sm">Detalles</a>
+            <a href="Contacto.html" class="px-4 py-2 rounded-md text-sm font-semibold" style="background:var(--brand-red); color:white">Solicitar Cotización</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Categorías de Productos -->
+  <section class="max-w-6xl mx-auto px-6 py-12">
+    <h2 class="text-xl font-semibold text-center">Categorías de Productos</h2>
+    <p class="text-sm text-gray-500 text-center mt-2">Amplio catálogo organizado por especialidad.</p>
+
+    <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="rounded-lg p-6 bg-white card-shadow border">
+        <div class="flex items-center gap-4">
+          <div class="p-3 rounded-full" style="background:rgba(170,0,0,0.08)">
+            <i class="fa-solid fa-wrench text-2xl" style="color:var(--brand-red)"></i>
+          </div>
+          <div>
+            <h3 class="font-semibold">Accesorios de Plomería</h3>
+            <p class="text-sm text-gray-500">Griferías, válvulas, tubería y repuestos.</p>
+          </div>
+        </div>
+        <ul class="mt-4 text-sm text-gray-600 space-y-1">
+          <li>• Tubos PVC, PPR, cobre</li>
+          <li>• Griferías y mezcladoras</li>
+          <li>• Sanitarios y lavamanos</li>
+        </ul>
+      </div>
+
+      <div class="rounded-lg p-6 bg-white card-shadow border">
+        <div class="flex items-center gap-4">
+          <div class="p-3 rounded-full bg-gray-100">
+            <i class="fa-solid fa-droplet text-2xl"></i>
+          </div>
+          <div>
+            <h3 class="font-semibold">Sistemas Hidráulicos</h3>
+            <p class="text-sm text-gray-500">Bombas, tanques, presurizadores y accesorios.</p>
+          </div>
+        </div>
+        <ul class="mt-4 text-sm text-gray-600 space-y-1">
+          <li>• Bombas centrífugas</li>
+          <li>• Tanques hidroneumáticos</li>
+          <li>• Accesorios de instalación</li>
+        </ul>
+      </div>
+
+      <div class="rounded-lg p-6 bg-white card-shadow border">
+        <div class="flex items-center gap-4">
+          <div class="p-3 rounded-full" style="background:rgba(255,165,0,0.08)">
+            <i class="fa-solid fa-fire-flame-curved text-2xl" style="color:orange"></i>
+          </div>
+          <div>
+            <h3 class="font-semibold">Gas Natural</h3>
+            <p class="text-sm text-gray-500">Reguladores, tubería y validaciones.</p>
+          </div>
+        </div>
+        <ul class="mt-4 text-sm text-gray-600 space-y-1">
+          <li>• Reguladores</li>
+          <li>• Medidores</li>
+          <li>• Accesorios certificados</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Marcas de Confianza -->
+  <section class="bg-gray-50 py-12">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-xl font-semibold text-center">Marcas de Confianza</h2>
+      <p class="text-sm text-gray-500 text-center mt-2">Trabajamos exclusivamente con marcas reconocidas por su calidad y durabilidad.</p>
+
+      <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="bg-white p-6 border rounded-lg text-center card-shadow">
+          <i class="fas fa-award text-3xl mb-3" style="color:#aa0000"></i>
+          <h3 class="font-semibold">Pavco</h3>
+          <p class="text-sm text-gray-500">Tuberías de PVC</p>
+        </div>
+        <div class="bg-white p-6 border rounded-lg text-center card-shadow">
+          <i class="fas fa-award text-3xl mb-3" style="color:#aa0000"></i>
+          <h3 class="font-semibold">FV</h3>
+          <p class="text-sm text-gray-500">Grifería</p>
+        </div>
+        <div class="bg-white p-6 border rounded-lg text-center card-shadow">
+          <i class="fas fa-award text-3xl mb-3" style="color:#aa0000"></i>
+          <h3 class="font-semibold">Corona</h3>
+          <p class="text-sm text-gray-500">Sanitarios</p>
+        </div>
+        <div class="bg-white p-6 border rounded-lg text-center card-shadow">
+          <i class="fas fa-award text-3xl mb-3" style="color:#aa0000"></i>
+          <h3 class="font-semibold">Pedrollo</h3>
+          <p class="text-sm text-gray-500">Bombas</p>
+        </div>
+        <div class="bg-white p-6 border rounded-lg text-center card-shadow">
+          <i class="fas fa-award text-3xl mb-3" style="color:#aa0000"></i>
+          <h3 class="font-semibold">Pentair</h3>
+          <p class="text-sm text-gray-500">Tanques</p>
+        </div>
+        <div class="bg-white p-6 border rounded-lg text-center card-shadow">
+          <i class="fas fa-award text-3xl mb-3" style="color:#aa0000"></i>
+          <h3 class="font-semibold">Mueller</h3>
+          <p class="text-sm text-gray-500">Cobre</p>
+        </div>
+        <div class="bg-white p-6 border rounded-lg text-center card-shadow">
+          <i class="fas fa-award text-3xl mb-3" style="color:#aa0000"></i>
+          <h3 class="font-semibold">Maxitrol</h3>
+          <p class="text-sm text-gray-500">Reguladores</p>
+        </div>
+        <div class="bg-white p-6 border rounded-lg text-center card-shadow">
+          <i class="fas fa-award text-3xl mb-3" style="color:#aa0000"></i>
+          <h3 class="font-semibold">Elster</h3>
+          <p class="text-sm text-gray-500">Medidores</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-100 text-gray-600 text-sm" aria-labelledby="footer-heading">
+    <h2 id="footer-heading" class="sr-only">Pie de página</h2>
+    <div class="max-w-7xl mx-auto px-6 py-10 grid grid-cols-1 sm:grid-cols-3 gap-8">
+      <div class="space-y-4">
+        <img src="IMAGENES/logo original HSG 11.png" alt="Logo HSG Construcciones" class="w-[100px] h-[60px]"/>
+        <p class="text-gray-600 max-w-xs">
+          Tu solución confiable en plomería y redes hidráulicas. Más de 10 años de experiencia brindando servicios en Bogotá y alrededores.
+        </p>
+        <div class="flex space-x-4">
+          <a href="#" class="hover:text-gray-800" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+          <a href="#" class="hover:text-gray-800" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+        </div>
+      </div>
+      <div>
+        <h3 class="font-semibold text-gray-800 mb-4">Enlaces rápidos</h3>
+        <ul class="space-y-2">
+          <li><a href="Index.html" class="hover:text-gray-800">Inicio</a></li>
+          <li><a href="#servicios" class="hover:text-gray-800">Servicios</a></li>
+          <li><a href="Proyectos.html" class="hover:text-gray-800">Proyectos</a></li>
+          <li><a href="Productos.html" class="hover:text-gray-800">Productos</a></li>
+          <li><a href="Contacto.html" class="hover:text-gray-800">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-semibold text-gray-800 mb-4">Contacto</h3>
+        <ul class="space-y-3">
+          <li class="flex items-center gap-2"><i class="fas fa-phone-alt icon-red"></i> +57 320 910 9488</li>
+          <li class="flex items-center gap-2"><i class="fas fa-envelope icon-red"></i> hsgconstrucciones8@gmail.com</li>
+          <li class="flex items-start gap-2"><i class="fas fa-map-marker-alt icon-red mt-1"></i> Bogotá, Colombia</li>
+        </ul>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto px-6 py-6 text-center text-gray-500 text-xs">
+      © 2025 HSG Construcciones SAS - Todos los derechos reservados.
+    </div>
+  </footer>
+
+  <!-- Script menú móvil -->
+  <script>
+    const mobileBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    function toggleMobileMenu() {
+      mobileMenu.classList.toggle('hidden');
+    }
+
+    mobileBtn.addEventListener('click', toggleMobileMenu);
+
+    document.addEventListener('click', function(e) {
+      const target = e.target;
+      if (!mobileMenu.contains(target) && !mobileBtn.contains(target) && !mobileMenu.classList.contains('hidden')) {
+        mobileMenu.classList.add('hidden');
+      }
+    });
+
+    window.addEventListener('resize', function() {
+      if (window.innerWidth >= 768) {
+        mobileMenu.classList.add('hidden');
+      }
+    });
+  </script>
+
+</body>
+</html>
+
+
+

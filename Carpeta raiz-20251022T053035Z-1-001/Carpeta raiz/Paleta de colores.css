@@ -1,0 +1,53 @@
+/*  PALETA DE COLORES - HSG CONSTRUCCIONES */
+
+/*  Colores principales */
+:root {
+  --rojo-principal: #b80000;     /* Fondo del hero, botones principales */
+  --rojo-secundario: #b72a2a;   /* Iconos, detalles y acentos */
+  --rojo-oscuro: #8a6f6f;       /* Degradados, fondos oscuros */
+  --rojo-completo: #aa0000ff;   /* Variante sólida usada en banners */
+
+/*  Colores neutros */
+  --blanco: #ffffff;            /* Fondos y texto sobre fondos oscuros */
+  --gris-claro: #f3f4f6;        /* Fondo general del sitio */
+  --gris-medio: #e5e7eb;        /* Bordes y separadores */
+  --gris-oscuro: #4b5563;       /* Texto principal */
+  --gris-secundario: #6b7280;   /* Texto secundario */
+  --gris-muy-oscuro: #333333;   /* Encabezados o texto destacado */
+
+/*  Color de acento */
+  --amarillo: #facc15;          /* Estrellas de calificación y acentos visuales */
+}
+
+/* 💡 Ejemplos de uso */
+
+body {
+  background-color: var(--gris-claro);
+  color: var(--gris-oscuro);
+  font-family: 'Poppins', sans-serif;
+}
+
+header {
+  background-color: var(--rojo-principal);
+  color: var(--blanco);
+}
+
+.btn-principal {
+  background-color: var(--rojo-principal);
+  color: var(--blanco);
+  border-radius: 8px;
+  padding: 10px 20px;
+  transition: background 0.3s ease;
+}
+
+.btn-principal:hover {
+  background-color: var(--rojo-secundario);
+}
+
+.icon-red {
+  color: var(--rojo-secundario);
+}
+
+.rating-star {
+  color: var(--amarillo);
+}

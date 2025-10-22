@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HSG Construcciones</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="hsg.css">
+  <style>
+    body { font-family: 'Roboto', sans-serif; }
+    .icon-red { color: #b72a2a; }
+    .dropdown:hover .dropdown-menu { display: block; }
+    /* Animación suave de los íconos */
+    .icon-animado {
+      transition: transform 0.3s ease;
+    }
+    .icon-animado:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+
+<body class="bg-gray-100">
+
+  <!-- Header fijo -->
+  <header class="fixed top-0 left-0 w-full border-b border-gray-200 bg-white z-50 shadow-md">
+    <nav class="max-w-[1280px] mx-auto flex items-center justify-between px-4 py-3" aria-label="Navegación principal">
+      <div class="flex items-center space-x-3">
+        <img src="IMAGENES/logo original HSG 11.png" alt="Logo HSG Construcciones" class="w-[200px] h-[80px] object-contain"/>
+      </div>
+
+      <!-- Menú principal (escritorio) -->
+      <ul class="hidden md:flex space-x-8 text-sm font-normal text-gray-800 relative">
+        <li><a href="Index.html" class="text-red-600 border-b-2 border-red-600 pb-[2px] font-semibold">Inicio</a></li>
+        
+        <!-- Dropdown Servicios -->
+        <li class="dropdown relative">
+          <a href="#servicios" class="hover:text-red-600 flex items-center gap-1">
+            Servicios <i class="fas fa-caret-down"></i>
+          </a>
+          <ul class="dropdown-menu absolute left-0 top-full mt-2 hidden bg-white border border-gray-200 rounded shadow-md w-48">
+            <li><a href="#plomeria" class="block px-4 py-2 text-gray-700 hover:bg-red-600 hover:text-white">Plomería Residencial</a></li>
+            <li><a href="#hidraulicas" class="block px-4 py-2 text-gray-700 hover:bg-red-600 hover:text-white">Redes Hidráulicas</a></li>
+            <li><a href="#gas" class="block px-4 py-2 text-gray-700 hover:bg-red-600 hover:text-white">Gas Natural</a></li>
+          </ul>
+        </li>
+
+        <li><a href="Proyectos.html" class="hover:text-red-600">Proyectos</a></li>
+        <li><a href="Productos.html" class="hover:text-red-600">Productos</a></li>
+        <li><a href="Contacto.html" class="hover:text-red-600">Contacto</a></li>
+      </ul>
+
+      <!-- Botones escritorio -->
+      <div class="hidden md:flex space-x-3">
+        <button class="flex items-center space-x-2 border border-red-600 text-red-600 rounded px-4 py-2 text-sm font-semibold hover:bg-red-50">
+          <i class="fas fa-phone-alt"></i><span>Llamar</span>
+        </button>
+        <button class="bg-red-600 text-white rounded px-4 py-2 text-sm font-semibold hover:bg-red-700">
+          Cotizar
+        </button>
+      </div>
+
+      <!-- Botón menú móvil -->
+     <script>
+document.getElementById('mobileMenuBtn').addEventListener('click', () => {
+  document.getElementById('mobileMenu').classList.toggle('hidden');
+});
+</script>
+
+    </nav>
+
+    <!-- Menú móvil -->
+    <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-gray-200 shadow-md">
+      <ul class="flex flex-col text-center py-3 space-y-2 text-gray-800">
+        <li><a href="Index.html" class="block py-2 hover:text-red-600">Inicio</a></li>
+        <li><a href="#servicios" class="block py-2 hover:text-red-600">Servicios</a></li>
+        <li><a href="Proyectos.html" class="block py-2 hover:text-red-600">Proyectos</a></li>
+        <li><a href="Productos.html" class="block py-2 hover:text-red-600">Productos</a></li>
+        <li><a href="Contacto.html" class="block py-2 hover:text-red-600">Contacto</a></li>
+        <li><a href="https://wa.me/573209109488" target="_blank" class="block py-2 text-red-600 font-semibold">Cotizar por WhatsApp</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Ajuste de espacio -->
+  <div class="h-[100px]"></div>
+
+  <!-- Hero -->
+  <main id="inicio" class="relative w-full min-h-[400px] flex flex-col items-center justify-center text-center px-4 py-20" style="background: linear-gradient(90deg, #b80000 0%, #8a6f6f 100%)">
+    <span class="mb-6 px-3 py-1 text-xs font-semibold text-white bg-gray-500 rounded-full">Empresa Certificada</span>
+    <h1 class="max-w-4xl text-white font-extrabold text-4xl sm:text-5xl leading-tight">
+      Tu solución confiable en plomería y redes hidráulicas
+    </h1>
+    <p class="max-w-2xl mt-4 text-white text-lg font-normal">
+      Servicios profesionales de plomería, redes hidráulicas y gas natural en Bogotá con más de 10 años de experiencia.
+    </p>
+    <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="#contacto" class="bg-gray-600 hover:bg-gray-700 text-white font-semibold text-sm rounded px-6 py-3 flex items-center gap-2">
+        Solicitar cotización <i class="fas fa-arrow-right"></i>
+      </a>
+      <a href="tel:+573209109488" class="border border-gray-400 text-white font-semibold text-sm rounded px-6 py-3 flex items-center gap-2 hover:border-gray-300">
+        <i class="fas fa-phone-alt"></i> Llamar ahora
+      </a>
+    </div>
+  </main>
+
+  <!-- Servicios principales -->
+  <section id="servicios" class="max-w-7xl mx-auto px-4 py-12 text-center bg-white">
+    <h2 class="text-2xl font-extrabold text-gray-900 mb-2">Nuestros Servicios Principales</h2>
+    <p class="text-gray-600 max-w-xl mx-auto mb-10">
+      Ofrecemos soluciones integrales para todas tus necesidades de plomería, redes hidráulicas y gas natural.
+    </p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-5xl mx-auto">
+      <div class="border border-gray-200 rounded-lg p-6 flex flex-col items-center">
+        <img src="IMAGENES/plomeria residencial.PNG" alt="Plomería Residencial" class="w-20 h-20 mb-4 icon-animado"/>
+        <h3 class="font-semibold text-gray-900 mb-2">Plomería Residencial</h3>
+        <p class="text-gray-600 text-sm leading-relaxed">
+          Instalación, reparación y mantenimiento de sistemas de plomería para hogares.
+        </p>
+      </div>
+
+      <div class="border border-gray-200 rounded-lg p-6 flex flex-col items-center">
+        <img src="IMAGENES/redes hidraulicas.PNG" alt="Redes Hidráulicas" class="w-20 h-20 mb-4 icon-animado"/>
+        <h3 class="font-semibold text-gray-900 mb-2">Redes Hidráulicas</h3>
+        <p class="text-gray-600 text-sm leading-relaxed">
+          Diseño e instalación de sistemas de distribución de agua en edificaciones.
+        </p>
+      </div>
+
+      <div class="border border-gray-200 rounded-lg p-6 flex flex-col items-center">
+        <img src="IMAGENES/gas natural.PNG" alt="Gas Natural" class="w-20 h-20 mb-4 icon-animado"/>
+        <h3 class="font-semibold text-gray-900 mb-2">Gas Natural</h3>
+        <p class="text-gray-600 text-sm leading-relaxed">
+          Instalación certificada de redes de gas natural cumpliendo todas las normativas.
+        </p>
+      </div>
+    </div>
+
+    <a href="Contacto.html" class="inline-block mt-10 px-6 py-2 border border-red-700 text-red-700 font-semibold rounded hover:bg-red-700 hover:text-white transition-colors duration-300">
+      Ver todos los servicios
+    </a>
+  </section>
+
+  <!-- Beneficios -->
+  <section class="bg-gray-100 py-12 px-4 text-center">
+    <h2 class="text-gray-800 font-semibold text-2xl mb-10">¿Por qué elegir HSG Construcciones?</h2>
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-center gap-12">
+      <div class="flex flex-col items-center max-w-xs mx-auto">
+        <img src="IMAGENES/Garantia total.png" alt="Garantía Total" class="w-20 h-20 mb-4 icon-animado"/>
+        <h3 class="font-semibold text-gray-800 mb-2">Garantía total</h3>
+        <p class="text-gray-600 text-sm">Todos nuestros trabajos incluyen garantía de satisfacción.</p>
+      </div>
+
+      <div class="flex flex-col items-center max-w-xs mx-auto">
+        <img src="IMAGENES/repuesta 24.7.PNG" alt="Respuesta 24/7" class="w-20 h-20 mb-4 icon-animado"/>
+        <h3 class="font-semibold text-gray-800 mb-2">Respuesta 24/7</h3>
+        <p class="text-gray-600 text-sm">Servicio de emergencias disponible las 24 horas del día.</p>
+      </div>
+
+      <div class="flex flex-col items-center max-w-xs mx-auto">
+        <img src="IMAGENES/experiencia.PNG" alt="Experiencia" class="w-20 h-20 mb-4 icon-animado"/>
+        <h3 class="font-semibold text-gray-800 mb-2">Experiencia</h3>
+        <p class="text-gray-600 text-sm">Más de 10 años brindando soluciones profesionales.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonios -->
+  <section id="testimonios" class="max-w-4xl mx-auto my-12 rounded-lg bg-gray-600 bg-opacity-80 flex flex-col items-center py-8 px-6 text-center">
+    <div class="flex space-x-1 mb-4">
+      <i class="fas fa-star text-yellow-400 text-xl"></i>
+      <i class="fas fa-star text-yellow-400 text-xl"></i>
+      <i class="fas fa-star text-yellow-400 text-xl"></i>
+      <i class="fas fa-star text-yellow-400 text-xl"></i>
+      <i class="fas fa-star text-yellow-400 text-xl"></i>
+    </div>
+    <p class="text-white text-lg font-semibold max-w-4xl mb-4">
+      "El servicio fue rápido y el trabajo quedó impecable. Muy recomendados."
+    </p>
+    <p class="text-white text-sm">
+      <span class="font-semibold">María González</span><br/>
+      Cliente satisfecha — Suba, Bogotá
+    </p>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto" class="max-w-4xl mx-auto px-4 py-12 text-center">
+    <h2 class="text-gray-800 font-extrabold text-2xl md:text-3xl mb-4">¿Necesitas ayuda con tu plomería?</h2>
+    <p class="text-gray-600 text-sm md:text-base max-w-xl mx-auto mb-8">
+      Contáctanos ahora para una cotización gratuita y sin compromiso. Nuestro equipo está listo para ayudarte.
+    </p>
+    <div class="flex justify-center gap-4 mb-8 flex-wrap">
+      <a href="https://wa.me/573209109488" target="_blank" class="bg-red-900 hover:bg-red-800 text-white font-semibold px-5 py-2 rounded">
+        Cotizar por WhatsApp
+      </a>
+      <a href="mailto:hsgconstrucciones8@gmail.com" class="border border-red-900 text-red-900 font-semibold px-5 py-2 rounded hover:bg-red-50">
+        Formulario de contacto
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-100 text-gray-600 text-sm">
+    <div class="max-w-7xl mx-auto px-6 py-10 grid grid-cols-1 sm:grid-cols-3 gap-8">
+      <div class="space-y-4">
+        <img src="IMAGENES/logo original HSG 11.png" alt="Logo HSG Construcciones" class="w-[100px] h-[60px]"/>
+        <p class="text-gray-600 max-w-xs">
+          Tu solución confiable en plomería y redes hidráulicas. Más de 10 años de experiencia brindando servicios en Bogotá y alrededores.
+        </p>
+        <div class="flex space-x-4">
+          <a href="#" class="hover:text-gray-800"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="hover:text-gray-800"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="font-semibold text-gray-800 mb-4">Enlaces rápidos</h3>
+        <ul class="space-y-2">
+          <li><a href="#servicios" class="hover:text-gray-800">Servicios</a></li>
+          <li><a href="Proyectos.html" class="hover:text-gray-800">Proyectos</a></li>
+          <li><a href="Productos.html" class="hover:text-gray-800">Productos</a></li>
+          <li><a href="Contacto.html" class="hover:text-gray-800">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="font-semibold text-gray-800 mb-4">Contacto</h3>
+        <ul class="space-y-3">
+          <li class="flex items-center gap-2"><i class="fas fa-phone-alt icon-red"></i> +57 320 910 9488</li>
+          <li class="flex items-center gap-2"><i class="fas fa-envelope icon-red"></i> hsgconstrucciones8@gmail.com</li>
+          <li class="flex items-start gap-2"><i class="fas fa-map-marker-alt icon-red mt-1"></i> Bogotá, Colombia</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 py-6 text-center text-gray-500 text-xs">
+      © 2025 HSG Construcciones SAS - Todos los derechos reservados.
+    </div>
+  </footer>
+
+  <!-- Script menú móvil -->
+  <script>
+    const mobileBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    function toggleMobileMenu() {
+      mobileMenu.classList.toggle('hidden');
+    }
+
+    // Abrir/cerrar con el botón
+    mobileBtn.addEventListener('click', toggleMobileMenu);
+
+    // Cerrar el menú si se hace click fuera (útil en móvil)
+    document.addEventListener('click', function(e) {
+      const target = e.target;
+      if (!mobileMenu.contains(target) && !mobileBtn.contains(target) && !mobileMenu.classList.contains('hidden')) {
+        mobileMenu.classList.add('hidden');
+      }
+    });
+
+    // Evitar que el menú se quede abierto al cambiar a escritorio (por ejemplo al redimensionar)
+    window.addEventListener('resize', function() {
+      if (window.innerWidth >= 768) {
+        mobileMenu.classList.add('hidden');
+      }
+    });
+  </script>
+</body>
+</html>

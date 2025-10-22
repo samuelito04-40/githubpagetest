@@ -1,0 +1,437 @@
+/* === HSG CONSTRUCCIONES - ESTILOS GENERALES === */
+/* === HSG CONSTRUCCIONES - ESTILOS GENERALES (ACTUALIZADO GRADIENT BANNER) === */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f9fafb;
+  color: #333;
+}
+
+/* --- HEADER --- */
+header {
+  transition: all 0.3s ease;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li a {
+  transition: background 0.3s, color 0.3s;
+}
+
+/* --- BOTONES --- */
+.btn-primary {
+  background-color: #aa0000;
+  color: #fff;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+.btn-primary:hover {
+  background-color: #880000;
+}
+
+.btn-outline {
+  border: 2px solid #aa0000;
+  color: #aa0000;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+.btn-outline:hover {
+  background-color: #aa0000;
+  color: #fff;
+}
+
+.btn-secondary {
+  display: inline-block;
+  background-color: #fff;
+  color: #aa0000;
+  border: 2px solid #aa0000;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+.btn-secondary:hover {
+  background-color: #aa0000;
+  color: #fff;
+}
+
+.btn-whatsapp {
+  display: inline-block;
+  background-color: #25d366;
+  color: #fff;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+.btn-whatsapp:hover {
+  background-color: #1da851;
+}
+
+.btn-mail {
+  background-color: #aa0000;
+  color: #fff;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+.btn-mail:hover {
+  background-color: #880000;
+}
+
+/* --- SECCIONES GENERALES --- */
+.section-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 10px;
+}
+.section-subtitle {
+  color: #666;
+  margin-bottom: 40px;
+}
+
+/* === BANNER / HERO: ahora con el gradiente exacto (igual imagen de referencia) === */
+/* Gradiente principal: rojo intenso a la izquierda -> tono gris rojizo a la derecha */
+.hero-bg {
+  background: linear-gradient(90deg, #b80000 0%, #8a6f6f 100%);
+  background-blend-mode: normal;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Banner utilizado en otras páginas (Proyectos, Productos, Contacto) */
+.banner-gradient {
+  background: linear-gradient(90deg, #b80000 0%, #8a6f6f 100%);
+  background-blend-mode: normal;
+}
+
+/* Sutil overlay para que el texto siempre mantenga lectura */
+.banner-gradient > .overlay,
+.hero-bg > .overlay {
+  /* opcional si quieres usar un overlay; si no la usas no afecta */
+  background: rgba(0,0,0,0.05);
+}
+
+/* --- SERVICE / CARD STYLES --- */
+.service-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+.service-card:hover {
+  transform: translateY(-5px);
+}
+.service-icon {
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 10px;
+}
+.service-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #aa0000;
+}
+.service-desc {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* --- BENEFICIOS --- */
+.benefit {
+  text-align: center;
+  max-width: 260px;
+  margin: auto;
+}
+.benefit-icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 10px;
+}
+.benefit-title {
+  font-weight: 700;
+  color: #aa0000;
+}
+.benefit-text {
+  color: #555;
+}
+
+/* --- TESTIMONIOS --- */
+.testimonial {
+  background: linear-gradient(135deg, #aa0000, #6b0000);
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+.testimonial-text {
+  font-size: 1.2rem;
+  font-style: italic;
+  max-width: 700px;
+  margin: 0 auto 10px;
+}
+
+/* --- CONTACTO --- */
+.contacto {
+  background-color: #fff;
+  text-align: center;
+  padding: 60px 20px;
+}
+.contacto-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #222;
+}
+.contacto-sub {
+  color: #555;
+  margin: 15px auto 40px;
+  max-width: 600px;
+}
+
+/* --- PRODUCTOS --- */
+.product-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+.product-card:hover {
+  transform: translateY(-5px);
+}
+.product-title {
+  font-weight: 600;
+  color: #aa0000;
+}
+.product-desc {
+  color: #555;
+  font-size: 0.95rem;
+}
+.product-tag {
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 12px;
+}
+.price {
+  font-weight: 700;
+  color: #222;
+}
+.btn-details {
+  background: #f1f1f1;
+  color: #333;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+.btn-details:hover {
+  background: #ddd;
+}
+.btn-quote {
+  background: #aa0000;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+.btn-quote:hover {
+  background: #880000;
+}
+
+/* --- CATEGORÍAS --- */
+.category-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.category-list {
+  margin-top: 10px;
+  color: #555;
+  font-size: 0.9rem;
+}
+.icon-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+}
+
+/* --- MARCAS --- */
+.brand-card {
+  text-align: center;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+.brand-card:hover {
+  transform: translateY(-5px);
+}
+.brand-card h3 {
+  font-weight: 600;
+  color: #aa0000;
+  margin-top: 5px;
+}
+
+/* --- PROYECTOS --- */
+.project-card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+.project-card:hover {
+  transform: translateY(-5px);
+}
+.project-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.project-title {
+  font-weight: 700;
+  color: #aa0000;
+}
+.project-desc {
+  color: #555;
+  font-size: 0.95rem;
+}
+.project-link {
+  display: inline-block;
+  color: #aa0000;
+  font-weight: 600;
+  margin-top: 10px;
+  transition: color 0.3s;
+}
+.project-link:hover {
+  color: #880000;
+}
+
+/* --- FORMULARIO DE CONTACTO --- */
+.form-input, .form-textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  margin-top: 5px;
+  outline: none;
+  transition: border 0.3s;
+}
+.form-input:focus, .form-textarea:focus {
+  border-color: #aa0000;
+}
+
+/* --- MAPA --- */
+.map-section iframe {
+  border: none;
+  width: 100%;
+  border-top: 2px solid #aa0000;
+}
+
+/* --- FOOTER --- */
+.footer {
+  background: #fff;
+  color: #444;
+  padding-top: 50px;
+}
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+.footer-logo {
+  width: 200px;
+  margin-bottom: 10px;
+}
+.footer-text {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.4;
+}
+.footer-col h3 {
+  color: #aa0000;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.footer-col ul {
+  list-style: none;
+}
+.footer-col ul li {
+  margin-bottom: 8px;
+  color: #444;
+}
+.footer-col ul li a {
+  color: #444;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.footer-col ul li a:hover {
+  color: #aa0000;
+}
+.social-icons a {
+  display: inline-block;
+  margin-right: 10px;
+  color: #aa0000;
+  transition: color 0.3s;
+}
+.social-icons a:hover {
+  color: #880000;
+}
+.icon-red {
+  color: #aa0000;
+}
+.footer-bottom {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #777;
+  padding: 20px;
+  border-top: 1px solid #ddd;
+  margin-top: 30px;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+  .service-card,
+  .product-card,
+  .category-card,
+  .project-card {
+    margin-bottom: 20px;
+  }
+  .footer-content {
+    text-align: center;
+  }
+  .footer-col ul li {
+    display: inline-block;
+    margin: 5px 10px;
+  }
+  .footer-col h3 {
+    margin-top: 20px;
+  }
+  nav ul {
+    display: none;
+  }
+}
+

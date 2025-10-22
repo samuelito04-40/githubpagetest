@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contacto - HSG Construcciones</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="hsg.css">
+  <style>
+    body { font-family: 'Roboto', sans-serif; }
+    .icon-red { color: #b72a2a; }
+    .dropdown:hover .dropdown-menu { display: block; }
+    :root { --brand-red: #aa0000ff; }
+    .card-shadow { box-shadow: 0 6px 18px rgba(0,0,0,0.08); }
+  </style>
+</head>
+
+<body class="bg-gray-100">
+
+  <!-- Header fijo -->
+  <header class="fixed top-0 left-0 w-full border-b border-gray-300 bg-white z-50 shadow-md">
+    <nav class="max-w-[1280px] mx-auto flex items-center justify-between px-4 py-3" aria-label="Navegación principal">
+      <div class="flex items-center space-x-3">
+        <img src="IMAGENES/logo original HSG 11.png" alt="Logo HSG Construcciones" class="w-[200px] h-[80px] object-contain"/>
+      </div>
+
+      <ul class="hidden md:flex space-x-8 text-sm font-normal text-gray-800 relative">
+        <li><a href="Index.html" class="hover:text-red-600">Inicio</a></li>
+        <li class="dropdown relative">
+          <a href="#servicios" class="hover:text-red-600 flex items-center gap-1">
+            Servicios <i class="fas fa-caret-down"></i>
+          </a>
+          <ul class="dropdown-menu absolute left-0 top-full mt-2 hidden bg-white border border-gray-200 rounded shadow-md w-48">
+            <li><a href="#plomeria" class="block px-4 py-2 text-gray-700 hover:bg-red-600 hover:text-white">Plomería Residencial</a></li>
+            <li><a href="#hidraulicas" class="block px-4 py-2 text-gray-700 hover:bg-red-600 hover:text-white">Redes Hidráulicas</a></li>
+            <li><a href="#gas" class="block px-4 py-2 text-gray-700 hover:bg-red-600 hover:text-white">Gas Natural</a></li>
+          </ul>
+        </li>
+        <li><a href="Proyectos.html" class="hover:text-red-600">Proyectos</a></li>
+        <li><a href="Productos.html" class="hover:text-red-600">Productos</a></li>
+        <li><a href="Contacto.html" class="text-red-600 border-b-2 border-red-600 pb-[2px] font-semibold">Contacto</a></li>
+      </ul>
+
+      <div class="hidden md:flex space-x-3">
+        <button class="flex items-center space-x-2 border border-red-600 text-red-600 rounded px-4 py-2 text-sm font-semibold hover:bg-red-50">
+          <i class="fas fa-phone-alt"></i><span>Llamar</span>
+        </button>
+        <button class="bg-red-600 text-white rounded px-4 py-2 text-sm font-semibold hover:bg-red-700">
+          Cotizar
+        </button>
+      </div>
+
+      <script>
+document.getElementById('mobileMenuBtn').addEventListener('click', () => {
+  document.getElementById('mobileMenu').classList.toggle('hidden');
+});
+</script>
+
+    </nav>
+
+    <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-gray-200 shadow-md">
+      <ul class="flex flex-col text-center py-3 space-y-2 text-gray-800">
+        <li><a href="Index.html" class="block py-2 hover:text-red-600">Inicio</a></li>
+        <li><a href="#servicios" class="block py-2 hover:text-red-600">Servicios</a></li>
+        <li><a href="Proyectos.html" class="block py-2 hover:text-red-600">Proyectos</a></li>
+        <li><a href="Productos.html" class="block py-2 hover:text-red-600">Productos</a></li>
+        <li><a href="Contacto.html" class="block py-2 text-red-600 font-semibold">Contacto</a></li>
+        <li><a href="https://wa.me/573209109488" target="_blank" class="block py-2 text-red-600 font-semibold">Cotizar por WhatsApp</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="contacto" class="banner-gradient text-white mt-[100px]">
+    <div class="max-w-6xl mx-auto px-6 py-20 text-center">
+      <span class="mb-4 px-3 py-1 text-xs font-semibold text-white bg-gray-500 rounded-full">Contáctanos</span>
+      <h1 class="mt-4 text-4xl md:text-5xl font-extrabold leading-tight">Estamos aquí para ayudarte</h1>
+      <p class="mt-4 max-w-2xl mx-auto text-white text-lg font-normal">
+        Solicita tu cotización gratuita o agenda una visita técnica con nuestro equipo especializado.
+      </p>
+      <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="https://wa.me/573209109488" target="_blank" class="btn-primary">
+          Cotizar por WhatsApp <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Información de contacto -->
+  <section class="max-w-7xl mx-auto px-6 py-16">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+      <div class="bg-white border rounded-lg p-8 card-shadow">
+        <i class="fas fa-phone-alt text-red-700 text-3xl mb-3"></i>
+        <h3 class="font-semibold text-gray-800 mb-2">Teléfono</h3>
+        <p class="text-gray-600 mb-1">+57 320 910 9488</p>
+        <p class="text-sm text-gray-500">Atención 24/7</p>
+      </div>
+
+      <div class="bg-white border rounded-lg p-8 card-shadow">
+        <i class="fas fa-envelope text-red-700 text-3xl mb-3"></i>
+        <h3 class="font-semibold text-gray-800 mb-2">Correo</h3>
+        <p class="text-gray-600 mb-1">hsgconstrucciones8@gmail.com</p>
+        <p class="text-sm text-gray-500">Responderemos en menos de 24 horas</p>
+      </div>
+
+      <div class="bg-white border rounded-lg p-8 card-shadow">
+        <i class="fas fa-map-marker-alt text-red-700 text-3xl mb-3"></i>
+        <h3 class="font-semibold text-gray-800 mb-2">Ubicación</h3>
+        <p class="text-gray-600 mb-1">Bogotá, Colombia</p>
+        <p class="text-sm text-gray-500">Atendemos en toda la ciudad</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Formulario de contacto -->
+  <section class="bg-white py-16">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-2xl font-bold text-gray-800 text-center mb-8">Envíanos un mensaje</h2>
+      <form action="#" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <label for="nombre" class="block text-sm font-medium text-gray-700 mb-1">Nombre</label>
+          <input type="text" id="nombre" name="nombre" required class="w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-1 focus:ring-red-700 focus:outline-none">
+        </div>
+        <div>
+          <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Correo electrónico</label>
+          <input type="email" id="email" name="email" required class="w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-1 focus:ring-red-700 focus:outline-none">
+        </div>
+        <div class="md:col-span-2">
+          <label for="mensaje" class="block text-sm font-medium text-gray-700 mb-1">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="5" required class="w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-1 focus:ring-red-700 focus:outline-none"></textarea>
+        </div>
+        <div class="md:col-span-2 flex justify-center">
+          <button type="submit" class="bg-red-700 hover:bg-red-800 text-white font-semibold px-6 py-3 rounded">Enviar mensaje</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Mapa -->
+  <section class="mt-12">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-xl font-bold text-gray-800 text-center mb-6">Ubicación en Google Maps</h2>
+      <div class="w-full h-[400px] border-2 border-gray-300 rounded-lg overflow-hidden">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.819936534892!2d-74.081749!3d4.60971!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f99a7b8efbb7f%3A0x2e6b3a2d1f7a2b4e!2sBogot%C3%A1%2C%20Colombia!5e0!3m2!1ses!2sco!4v1705000000000!5m2!1ses!2sco"
+          width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-100 text-gray-600 text-sm mt-12 py-8 text-center">
+    <p>© 2025 HSG Construcciones — Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Script menú móvil -->
+  <script>
+    document.getElementById('mobileMenuBtn').addEventListener('click', () => {
+      document.getElementById('mobileMenu').classList.toggle('hidden');
+    });
+  </script>
+
+</body>
+</html>
+
